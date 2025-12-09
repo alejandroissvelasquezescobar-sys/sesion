@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos\estilos.css">
+</head>
+<body>
+ <script src="js\java.js"></script>
+    
+    <h2 style="text-align:center;">sistema completo de registro, inicio de Sesión y recuperacion de contraseña </h2>
+
+    <div class="card" id="registro">
+      <h3>Registro</h3>
+      <input id="r_name" placeholder="Nombre completo">
+      <input id="r_email" placeholder="Correo electrónico">
+      <input id="r_phone" placeholder="Celular">
+      <input type="password" id="r_pass" placeholder="Contraseña">
+      <label><input type="checkbox" id="show_r_pass"> Mostrar contraseña</label>
+      <button onclick="registrar()">Crear Cuenta</button>
+      <div id="msg_reg" class="msg"></div>
+    </div>
+    
+
+    <div class="card" id="login">
+      <h3>Inicio de Sesión</h3>
+      <input id="l_email" placeholder="Correo">
+      <input type="password" id="l_pass" placeholder="Contraseña">
+      <label><input type="checkbox" id="show_l_pass"> Mostrar contraseña</label>
+      <button onclick="iniciarSesion()">Entrar</button>
+      <div id="msg_log" class="msg"></div>
+      <p class="link" onclick="mostrarRecuperar()">¿Olvidaste tu contraseña?</p>
+    </div>
+    
+    <div class="card hidden" id="recuperar">
+      <h3>Recuperar Contraseña</h3>
+      <input id="rec_email" placeholder="Correo">
+      <input type="password" id="rec_pass" placeholder="Nueva contraseña">
+      <label><input type="checkbox" id="show_rec_pass"> Mostrar contraseña</label>
+      <button onclick="recuperar()">Actualizar Contraseña</button>
+      <div id="msg_rec" class="msg"></div>
+      <p class="link" onclick="ocultarRecuperar()">Volver al inicio</p>
+    </div>
+
+     
+</body>
+</html>
